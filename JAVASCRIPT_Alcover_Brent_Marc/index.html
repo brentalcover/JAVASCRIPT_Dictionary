@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="card">
+        <h1>Dictionary App</h1>
+        <p class="subtitle">Search any English word</p>
+        
+        <div class="search-area">
+            <form class="search-box" id="searchForm">
+                <input type="search" id="wordInput" placeholder="Type a word (e.g. computer)" value="computer" required autocomplete="off" aria-autocomplete="list" aria-controls="searchSuggestions" aria-expanded="false">
+                <button id="searchBtn" type="submit">Search</button>
+            </form>
+            <ul id="searchSuggestions" class="suggestions" role="listbox" aria-label="Suggested words" hidden></ul>
+        </div>
+
+        <div class="result-container">
+            <h2 id="wordTitle">--</h2>
+            <p id="phonetic" class="phonetic-text">--</p>
+            <div id="definitionBox">
+                <p id="meaning">Meaning will appear here...</p>
+            </div>
+        </div>
+
+        <p id="statusText" class="status" aria-live="polite">Ready</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
